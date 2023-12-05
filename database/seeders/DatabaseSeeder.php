@@ -18,18 +18,11 @@ class DatabaseSeeder extends Seeder
     {
 //         \App\Models\User::factory(10)->create();
 
-         $team = Team::factory()->create([
-             'name' => 'Test Team',
-         ]);
-
-         $role = Role::factory()->create([
-             'team_id' => $team->id,
-         ]);
+         $role = Role::factory()->create();
 
          User::factory()->create([
              'name' => 'Test User',
              'email' => 'test@example.com',
-             'team_id' => $team->id,
              'role_id' => $role->id,
          ]);
 

@@ -19,7 +19,6 @@ class RoleFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'team_id' => Team::factory(),
         ];
     }
 }

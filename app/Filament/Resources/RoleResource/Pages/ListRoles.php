@@ -18,12 +18,4 @@ class ListRoles extends ListRecords
             Actions\CreateAction::make(),
         ];
     }
-
-    public function getTabs(): array
-    {
-        return [
-            null => Tab::make('All'),
-            ...Role::all()->mapWithKeys(fn (Role $role) => [$role->id => Tab::make($role->name)]),
-        ];
-    }
 }

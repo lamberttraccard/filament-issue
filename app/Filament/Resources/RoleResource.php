@@ -23,7 +23,8 @@ class RoleResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name')
+                    ->required()
             ]);
     }
 
@@ -61,8 +62,8 @@ class RoleResource extends Resource
     {
         return [
             'index' => Pages\ListRoles::route('/'),
-            'create' => Pages\CreateRole::route('/create'),
-            'edit' => Pages\EditRole::route('/{record}/edit'),
+//            'create' => Pages\CreateRole::route('/create'),
+//            'edit' => Pages\EditRole::route('/{record}/edit'),
         ];
     }
 }

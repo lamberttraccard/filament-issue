@@ -28,10 +28,10 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->tenant(Team::class)
-            ->tenantMiddleware([
-                ApplyTenantScope::class,
-            ], isPersistent: true)
+//            ->tenant(Team::class)
+//            ->tenantMiddleware([
+//                ApplyTenantScope::class,
+//            ], isPersistent: true)
             ->login()
             ->colors([
                 'primary' => Color::Amber,

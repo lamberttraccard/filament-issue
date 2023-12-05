@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignIdFor(\App\Models\Team::class);
+//            $table->foreignIdFor(\App\Models\Team::class);
             $table->timestamps();
         });
     }
