@@ -26,6 +26,8 @@ class DatabaseSeeder extends Seeder
              'role_id' => $role->id,
          ]);
 
+         User::factory()->count(50)->create();
+
 
         Role::factory()->count(1)->create();
     }
